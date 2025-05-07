@@ -1,3 +1,3 @@
 import arithmetics
 
-print(arithmetics.sub(1, 2))
+print(arithmetics.div(20, 5))

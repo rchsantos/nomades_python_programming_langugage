@@ -1,15 +1,14 @@
-def add(a: int, b: int) -> int:
+def add(a: int, b: int):
     """
     Function that returns the sum of two numbers
-    Params:
-      a: the first number
-      b: the second number
+    :param a: the first number
+    :param b: the second number
     :return: the sum of the two numbers
     """
     return a+b
 
 
-def sub(a: int, b: int) -> int:
+def sub(a, b):
     """
     Function that returns the subtraction of two numbers
     :param a: the first number
@@ -19,7 +18,7 @@ def sub(a: int, b: int) -> int:
     return a-b
 
 
-def mul(a: int, b: int) -> int:
+def mul(a, b):
     """
     Function that returns the multiplication of two numbers
     :param a: the first number
@@ -29,7 +28,7 @@ def mul(a: int, b: int) -> int:
     return a*b
 
 
-def div(a: int, b: int) -> int:
+def div(a, b):
     """
     Function that returns the division of two numbers
     :param a: the first number
