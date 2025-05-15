@@ -13,9 +13,15 @@ def draw_board(board: list[str]) -> None:
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
     lines: list[str] = [
         'Tic-Tac-Toe\n',
-        '   |   |   ', f' {board[0]} | {board[1]} | {board[2]} ', '___|___|___', 
-        '   |   |   ', f' {board[3]} | {board[4]} | {board[5]}\t|1|2|3', '___|___|___\t------',
-        '   |   |\t|4|5|6', f' {board[6]} | {board[7]} | {board[8]}\t------', '   |   |\t|7|8|9',
+        '   |   |   ', 
+        f' {board[0]} | {board[1]} | {board[2]} ', 
+        '___|___|___', 
+        '   |   |   ', 
+        f' {board[3]} | {board[4]} | {board[5]}\t|1|2|3', 
+        '___|___|___\t------',
+        '   |   |\t|4|5|6', 
+        f' {board[6]} | {board[7]} | {board[8]}\t------', 
+        '   |   |\t|7|8|9',
         ''
     ]
     for line in lines:
@@ -33,12 +39,76 @@ def check_win(board: list[str], player: str) -> bool:
     Returns:
     - win (bool): True if the player has won, False otherwise.
     """
-    return False
+    # if (
+    #     board[0] == board[1] == board[2] == player
+    #     or board[3] == board[4] == board[5] == player 
+    #     or board[6] == board[7] == board[8] == player 
+        
+    #     or board[0] == board[3] == board[6] == player 
+    #     or board[1] == board[4] == board[7] == player 
+    #     or board[2] == board[5] == board[8] == player 
+
+    #     or board[0] == board[4] == board[8] == player 
+    #     or board[2] == board[4] == board[6] == player 
+    # ):
+    #     return True
+    
+    # return False
+
+    # return (
+    #     board[0] == board[1] == board[2] == player
+    #     or board[3] == board[4] == board[5] == player 
+    #     or board[6] == board[7] == board[8] == player 
+        
+    #     or board[0] == board[3] == board[6] == player 
+    #     or board[1] == board[4] == board[7] == player 
+    #     or board[2] == board[5] == board[8] == player 
+
+    #     or board[0] == board[4] == board[8] == player 
+    #     or board[2] == board[4] == board[6] == player 
+    # )
+
+    # combos: list[tuple[int]] = [
+    #     (0, 1, 2),
+    #     (3, 4, 5),
+    #     (6, 7, 8),
+
+    #     (0, 3, 6),
+    #     (1, 4, 7),
+    #     (2, 5, 8),
+
+    #     (0, 4, 8),
+    #     (2, 4, 6),
+    # ]
+
+    # for combo in combos:
+    #     if board[combo[0]] == board[combo[1]] == board[combo[2]] == player:
+    #         return True
+    # return False 
+
+    combos: list[tuple[int]] = [
+        (0, 1, 2),
+        (3, 4, 5),
+        (6, 7, 8),
+
+        (0, 3, 6),
+        (1, 4, 7),
+        (2, 5, 8),
+
+        (0, 4, 8),
+        (2, 4, 6),
+    ]
+    
+    for i0, i1, i2 in combos:
+        if board[i0] == board[i1] == board[i2] == player:
+            return True
+    return False 
 
 # Function to play the game
 def play_game():
     # The board variable store the state of the game, where board[0] is the top left corner and board[8] is the bottom right corner
     board: list[str] = [' '] * 9
+    # current_player: str = 'X' if random.random() > 0.5 else 'O'
     current_player: str = random.choice(["X", "O"])
     # the game_over variable is used to know if the game is running or not
     game_over: bool = False
@@ -51,21 +121,38 @@ def play_game():
         # Hint: Use input() to get the move from the player
         move: int = int(input(f"Player {current_player}, enter your move (1-9): "))
 
-        print("your move is", move)
-        time.sleep(0.6)
-
-        # TODO: Check if move is valid
+        # Check if move is valid
         # A valid move is an integer between 1 and 9 (both inclusive)
         # And the board for this integer is empty
         # if move is not valid, print "Invalid move. Try again!" and ask for a new moove
+        
+        # if not ((move >= 1 and move <= 9) and board[move-1] == ' '):
+        # if not (move in range(1, 9+1) and board[move-1] == ' '):
+        # if not (board[move-1] == ' ' and (1 <= move <= 9)):
+        if not (1 <= move <= 9 and board[move-1] == ' '):
+            print("Ivalid move, try again !")
+            time.sleep(0.6)
+            continue
 
-        # TODO: Update the board with the move
+        # Update the board with the move
         # The borad is the list named board that contains state of the game
         # We want to save the current_player string value
+        board[move-1] = current_player
         
         # TODO: Check if the current player has won or draw or continue
         # Hint: Use the check_win() function to check if the current player has won
         # You need to think about something for the draw case
         # if no win and no draw the game continues, switch user 'X'->'O' || 'O'->'X'
+        if check_win(board, current_player):
+            draw_board(board)
+            game_over = True
+            print(f"{current_player} Won !!!")
+        elif ' ' not in board:
+            draw_board(board)
+            game_over = True
+            print("It's a tie !!!")
+        else:
+            current_player = "X" if current_player == "O" else "O"
+        
 # Start the game
 play_game()

@@ -18,30 +18,24 @@ python/exemples/
 # student_exercises
 # implementations
 python/student_exercises/implementations/basic_input_output/
-python/student_exercises/implementations/bruteforce/
-python/student_exercises/implementations/guess_number/
-python/student_exercises/implementations/input_io/
 python/student_exercises/implementations/pygame/
-python/student_exercises/implementations/random_password_generator/
-python/student_exercises/implementations/some_small_exercises/
 
 # corrections
 python/student_exercises/corrections/basic_input_output/
-python/student_exercises/corrections/basics/my_array/
-python/student_exercises/corrections/basics/my_maths/
 python/student_exercises/corrections/basics/my_dictionaries/
 python/student_exercises/corrections/basics/my_lists/
 python/student_exercises/corrections/basics/my_lists_comprehensions/
 python/student_exercises/corrections/basics/my_tuples/
 python/student_exercises/corrections/basics/my_strings/
 python/student_exercises/corrections/basics/my_sets/
-python/student_exercises/corrections/bruteforce/
-python/student_exercises/corrections/guess_number/
 python/student_exercises/corrections/input_io/
 python/student_exercises/corrections/pygame/
-python/student_exercises/corrections/random_password_generator/
-python/student_exercises/corrections/some_small_exercises/
 
+cours/jupyter/files/users_w.csv
+python/examples/infinite_loop.py
+python/examples/truty_falsy.py
+python/student_exercises/corrections/bruteforce/bruteforce_arnaud.py
+python/test.py
 # NUMPY and PANDAS
 # Exemples
 numpy_pandas/examples/data_aquisition/REST_API/
