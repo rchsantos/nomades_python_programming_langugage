@@ -18,7 +18,6 @@ python/exemples/
 # student_exercises
 # implementations
 python/student_exercises/implementations/basic_input_output/
-python/student_exercises/implementations/pygame/
 
 # corrections
 python/student_exercises/corrections/basic_input_output/
@@ -28,8 +27,6 @@ python/student_exercises/corrections/basics/my_lists_comprehensions/
 python/student_exercises/corrections/basics/my_tuples/
 python/student_exercises/corrections/basics/my_strings/
 python/student_exercises/corrections/basics/my_sets/
-python/student_exercises/corrections/input_io/
-python/student_exercises/corrections/pygame/
 
 cours/jupyter/files/users_w.csv
 python/examples/infinite_loop.py
@@ -51,29 +48,23 @@ numpy_pandas/examples/pandas/
 
 # student_exercises
 # implementations
-numpy_pandas/student_exercises/implementations/data_aquisition/REST_API/
 numpy_pandas/student_exercises/implementations/data_aquisition/web_scrapping/basic/country_capitals/
 numpy_pandas/student_exercises/implementations/data_aquisition/web_scrapping/IMDB/
 numpy_pandas/student_exercises/implementations/data_aquisition/web_scrapping/Selenium/
 numpy_pandas/student_exercises/implementations/data_visualization/
-numpy_pandas/student_exercises/implementations/jupyter/
 numpy_pandas/student_exercises/implementations/matplotlib/
 numpy_pandas/student_exercises/implementations/ML/
 numpy_pandas/student_exercises/implementations/numpy/
-numpy_pandas/student_exercises/implementations/pandas/
 
 # corrections
-numpy_pandas/student_exercises/corrections/data_aquisition/REST_API/
 numpy_pandas/student_exercises/corrections/data_aquisition/web_scrapping/basic/country_capitals/
 numpy_pandas/student_exercises/corrections/data_aquisition/web_scrapping/IMDB/
 numpy_pandas/student_exercises/corrections/data_aquisition/web_scrapping/Selenium/
 numpy_pandas/student_exercises/corrections/data_visualization/
-numpy_pandas/student_exercises/corrections/jupyter/
 numpy_pandas/student_exercises/corrections/matplotlib/
 numpy_pandas/student_exercises/corrections/ML/
 numpy_pandas/student_exercises/corrections/numpy/
 numpy_pandas/student_exercises/corrections/numpy copy/
-numpy_pandas/student_exercises/corrections/pandas/
 
 # Flask - Web
 flask/env.yml
