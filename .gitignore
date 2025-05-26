@@ -54,7 +54,6 @@ numpy_pandas/student_exercises/implementations/data_aquisition/web_scrapping/Sel
 numpy_pandas/student_exercises/implementations/data_visualization/
 numpy_pandas/student_exercises/implementations/matplotlib/
 numpy_pandas/student_exercises/implementations/ML/
-numpy_pandas/student_exercises/implementations/numpy/
 
 # corrections
 numpy_pandas/student_exercises/corrections/data_aquisition/web_scrapping/basic/country_capitals/
@@ -63,7 +62,6 @@ numpy_pandas/student_exercises/corrections/data_aquisition/web_scrapping/Seleniu
 numpy_pandas/student_exercises/corrections/data_visualization/
 numpy_pandas/student_exercises/corrections/matplotlib/
 numpy_pandas/student_exercises/corrections/ML/
-numpy_pandas/student_exercises/corrections/numpy/
 numpy_pandas/student_exercises/corrections/numpy copy/
 
 # Flask - Web
