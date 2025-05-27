@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block title %}
+  Jinja | If
+{% endblock %}
+
+{% block contents %}
+  <h1>If</h1>
+  {% if age < 18 %}
+    <p style="background-color: red;">You can't enter in the website</p>
+  {% else %}
+    <p style="background-color: green;">Welcome to the online voting website</p>
+  {% endif %}
+{% endblock %}
+
