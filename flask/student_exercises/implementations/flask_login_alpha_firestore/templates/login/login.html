@@ -6,7 +6,7 @@
 
 {% block contents %}
   <h1>Login</h1>
-  <form action="/login" method="post">
+  <form action="/login" method="post"> <!-- TODO: change /login to url_for function-->
     <div class="mb-3">
       <label for="uid" class="form-label">Username</label>
       <input type="email" class="form-control" name="uid" id="uid" placeholder="Username" required>
