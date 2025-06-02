@@ -1,0 +1,50 @@
+{% extends 'includes/_base.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block contents %}
+  <h1>Register</h1>
+  <form action="{{ url_for('register') }}" method="post" enctype="multipart/form-data"> <!-- Change /register by the url_for function -->
+    <div class="mb-3">
+      <label for="firstname" class="form-label">Firstname</label>
+      <input required class="form-control" name="firstname" id="firstname" placeholder="Firstname">
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Lastname</label>
+      <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">email</label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+    </div>
+    <div class="mb-3">
+      <label for="uid" class="form-label">Username</label>
+      <input type="text" class="form-control" name="uid" id="uid" placeholder="Username">
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" class="form-control" name="age" id="age" placeholder="Age">
+    </div>
+    <div class="mb-3">
+      <label for="profile_picture" class="form-label">Profile Picture</label>
+      <input type="file" class="form-control" name="profile_picture" id="profile_picture" accept="image/*">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
+    </div>
+    <div class="mb-3">
+      <label for="pwd2" class="form-label">Repeat Password</label>
+      <input type="password" class="form-control" name="pwd2" id="pwd2" placeholder="Repeate Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+
+    <p>
+      If you already have an account <a href="{{ url_for('login') }}">Login here</a>
+    </p>
+  </form>
+{% endblock %}
+
