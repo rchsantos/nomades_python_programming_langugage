@@ -1,0 +1,10 @@
+#profile_picture {
+  display: flex;
+  justify-content: center;
+}
+
+#profile_picture {
+  width: 400px;
+  border-radius: 33%;
+  margin: auto;
+}

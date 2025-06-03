@@ -1,0 +1,28 @@
+{% extends 'includes/_base.html' %}
+{% from 'includes/_macros.html' import displayInput %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block contents %}
+  <h1>Register</h1>
+  <form action="{{ url_for('register') }}" method="post" enctype="multipart/form-data"> <!-- Change /register by the url_for function -->
+    {{ displayInput(form.firstname) }}
+    {{ displayInput(form.lastname) }}
+    {{ displayInput(form.email) }}
+    {{ displayInput(form.uid) }}
+    {{ displayInput(form.age) }}
+    {{ displayInput(form.pp) }}
+    {{ displayInput(form.pwd) }}
+    {{ displayInput(form.pwd2) }}
+    
+
+    <button type="submit" class="btn btn-primary">Register</button>
+
+    <p>
+      If you already have an account <a href="{{ url_for('login') }}">Login here</a>
+    </p>
+  </form>
+{% endblock %}
+

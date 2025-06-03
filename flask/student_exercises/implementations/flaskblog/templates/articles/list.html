@@ -1,0 +1,27 @@
+{% extends 'includes/_base.html' %}
+
+{% block title %}My articles{% endblock %}
+
+{% block contents %}
+  <h1>My Articles</h1>
+  <div class="row">
+    {% if articles == [] %}
+      <p>No articles yet</p>
+    {% else %}
+    {% for article in articles %}
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ article["title"] }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ article["author_fullname"] }}</h6>
+            <p class="card-text">{{ article["body"] }}</p>
+          </div>
+          <div class="card-footer text-end">
+            <a href="#" class="card-link btn btn-danger">Delete</a> <!-- TODO (BONUS): Add the href route value for deleting this article user url_for -->
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}
