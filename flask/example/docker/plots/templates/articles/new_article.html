@@ -1,0 +1,20 @@
+{% extends 'includes/_base.html' %}
+{% from 'includes/_macros.html' import displayInput %}
+
+{% block title %}New article{% endblock %}
+
+{% block contents %}
+  <h1>Create an article</h1>
+  <!-- Create the form that sends the data to the articles.add_article route using the POST method -->
+  <form action="{{ url_for('articles.add_article') }}" method="post">
+    <!-- (Optional): Create the form using WTForms -->
+    <!-- This form should contains the title -->
+    {{ displayInput(form.title) }}
+    <!-- This form should contains the body -->
+    {{ displayInput(form.body) }}
+    <!-- This form should contains the submit button -->
+     <div class="mb-3">
+       <button class="btn btn-primary" type="submit">Create article</button>
+      </div>
+  </form>
+{% endblock %}

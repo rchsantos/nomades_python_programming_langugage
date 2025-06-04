@@ -1,0 +1,31 @@
+{% extends 'includes/_base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block contents %}
+  <h1>{{ page_title }}</h1>
+  <div class="row">
+    {% if articles == [] %}
+      <p>No articles yet</p>
+    {% else %}
+    {% for article in articles %}
+      <div class="col-md-3 mt-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ article["title"] }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ article["author_fullname"] }}</h6>
+            <p class="card-text">{{ article["body"] }}</p>
+          </div>
+          {% if article.author == user_ref %}
+            <div class="card-footer text-end">
+              <form action="{{ url_for('articles.delete_by_id', article_id=article.id) }}" method="post">
+                <button class="btn btn-danger" type="submit">Delete</button>
+              </form>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}

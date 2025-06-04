@@ -1,0 +1,18 @@
+{% extends 'includes/_base.html' %}
+
+{% block title %}
+  Plotly plot
+{% endblock %}
+
+{% block contents %}
+  <h1>Plotly</h1>
+  <div class="row">
+    <div class="col-6">
+      {{ plot | safe }}
+    </div>
+    <div class="col-6">
+      {{ bar | safe }}
+    </div>
+  </div>
+{% endblock %}
+

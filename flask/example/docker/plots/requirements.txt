@@ -1,0 +1,8 @@
+flask
+WTForms
+firebase-admin
+email_validator
+pandas
+numpy
+matplotlib
+plotly
