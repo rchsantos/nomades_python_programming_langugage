@@ -49,10 +49,10 @@ def register():
 
     try:
       filename: str = f"{uuid4()}.{profile_picture.filename.split('.')[-1]}"
+      profile_picture.save(os.path.join(CURR_DIR, 'static', 'imgs', 'uploads', filename))
     except:
       filename = ""
 
-    profile_picture.save(os.path.join(CURR_DIR, 'static', 'imgs', 'uploads', filename))
 
     # Add the new user to the firestore users collection
     # Create a dictionnary representing the new user

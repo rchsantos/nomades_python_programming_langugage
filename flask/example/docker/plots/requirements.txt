@@ -1,5 +1,5 @@
 flask
-WTForms
+WTForms==2.3.3
 firebase-admin
 email_validator
 pandas
