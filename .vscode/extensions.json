@@ -4,7 +4,10 @@
     "ms-toolsai.jupyter",           // Jupyter
     "mechatroner.rainbow-csv",      // Rainbow CSV
     "ms-vscode-remote.remote-wsl",  // Remote - WSL
-    "lfm.vscode-makefile-term",     // Makefile Run Tools
-    "samuelcolvin.jinjahtml"        // Jinja
+    "lfm.vscode-makefile-term",      // Makefile Run Tools
+    "samuelcolvin.jinjahtml",       // Jinja
+    "wholroyd.jinja",
+    "noxiz.jinja-snippets",
+    "Gruntfuggly.todo-tree"         // TODO-Tree
   ]
 }
